@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
 
     
-    // with the help pf Brian Advent's You Tube Channel 
+    //  this func was developed with the help of Brian Advent's You Tube Channel 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         guard let location = touch?.location(in: sceneView) else { return }
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
     }
 }
 
-// this extension was developed with thanks to https://github.com/arirawr/ARKit-FloorIsLava
+// this extension was developed with the help of this repo https://github.com/arirawr/ARKit-FloorIsLava
 extension ViewController: ARSCNViewDelegate {
     
     func createPlaneNode(anchor: ARPlaneAnchor) -> SCNNode {

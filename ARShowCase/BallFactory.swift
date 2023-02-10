@@ -23,12 +23,9 @@ struct BallFactory {
         ball.name = name
         
         if let normalImage {
-            ball.geometry?.firstMaterial?.normal.contents = normalImage
             ball.geometry?.firstMaterial?.diffuse.contents = normalImage
-            ball.geometry?.firstMaterial?.emission.contents = normalImage
         } else {
             ball.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-            ball.geometry?.firstMaterial?.emission.contents = UIColor.blue
         }
 
         let body = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(geometry: SCNSphere(radius: CGFloat(ballRadius)), options: nil))

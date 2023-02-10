@@ -89,7 +89,19 @@ class ViewController: UIViewController {
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+    }
+    
+
+    @IBAction func removeBallsTouchUpInside(_ sender: Any) {
+            removeBalls()
+    }
+    
+    private func removeBalls() {
+        for node in sceneView.scene.rootNode.childNodes {
+            if node.name == "ball" {
+                node.removeFromParentNode()
+            }
+        }
     }
 }
 

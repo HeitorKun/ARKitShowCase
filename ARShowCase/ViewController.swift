@@ -15,17 +15,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        //named: "art.scnassets/ship.scn"
-        // Create a new scene
+        
+        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        
         let scene = SCNScene()
         
-        // Set the scene to the view
         sceneView.scene = scene
     }
     

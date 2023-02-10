@@ -10,8 +10,11 @@ import ARKit
 
 struct PlaneFactory {
     
+    var name: String = "plane"
+    
     func createPlaneNode(_ width: CGFloat, _ height: CGFloat) -> SCNNode {
         let plane = SCNPlane(width: width , height: height)
+        plane.name = name
         plane.firstMaterial?.diffuse.contents = UIImage(named: "universe")
         let planeNode = SCNNode(geometry: plane)
         planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2, 1, 0, 0)

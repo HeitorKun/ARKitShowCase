@@ -14,6 +14,7 @@
 		EE08976E29953AA900AB3D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE08976D29953AA900AB3D44 /* Assets.xcassets */; };
 		EE08977129953AA900AB3D44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE08976F29953AA900AB3D44 /* LaunchScreen.storyboard */; };
 		EE08977829955E9900AB3D44 /* BallFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE08977729955E9900AB3D44 /* BallFactory.swift */; };
+		EE6895E82996DEEA00D38C10 /* PlaneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6895E72996DEEA00D38C10 /* PlaneFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		EE08976D29953AA900AB3D44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE08977029953AA900AB3D44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE08977729955E9900AB3D44 /* BallFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallFactory.swift; sourceTree = "<group>"; };
+		EE6895E72996DEEA00D38C10 /* PlaneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				EE08976D29953AA900AB3D44 /* Assets.xcassets */,
 				EE08976F29953AA900AB3D44 /* LaunchScreen.storyboard */,
 				EE08977729955E9900AB3D44 /* BallFactory.swift */,
+				EE6895E72996DEEA00D38C10 /* PlaneFactory.swift */,
 			);
 			path = ARShowCase;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE08976929953AA700AB3D44 /* ViewController.swift in Sources */,
+				EE6895E82996DEEA00D38C10 /* PlaneFactory.swift in Sources */,
 				EE08977829955E9900AB3D44 /* BallFactory.swift in Sources */,
 				EE08976529953AA700AB3D44 /* AppDelegate.swift in Sources */,
 			);

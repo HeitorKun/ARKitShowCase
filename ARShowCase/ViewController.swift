@@ -96,23 +96,14 @@ class ViewController: UIViewController {
 // this extension was developed with the help of this repo https://github.com/arirawr/ARKit-FloorIsLava
 extension ViewController: ARSCNViewDelegate {
     
-    func createPlaneNode(anchor: ARPlaneAnchor) -> SCNNode {
-        let plane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
-    
-        plane.firstMaterial?.diffuse.contents = UIColor.cyan
-        let planeNode = SCNNode(geometry: plane)
-        planeNode.position = SCNVector3Make(anchor.center.x, 0, anchor.center.z)
-
-        planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2, 1, 0, 0)
-
-        return planeNode
-    }
-    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
 
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         
-        let planeNode = createPlaneNode(anchor: planeAnchor)
+        let width = CGFloat(planeAnchor.extent.x)
+        let height = CGFloat(planeAnchor.extent.z)
+        let planeNode = PlaneFactory().createPlaneNode(width, height)
+        planeNode.position = SCNVector3Make(planeAnchor.center.x, 0, planeAnchor.center.z)
         node.addChildNode(planeNode)
     }
 
@@ -123,7 +114,12 @@ extension ViewController: ARSCNViewDelegate {
             (childNode, _) in
             childNode.removeFromParentNode()
         }
-        let planeNode = createPlaneNode(anchor: planeAnchor)
+        
+        let width = CGFloat(planeAnchor.extent.x)
+        let height = CGFloat(planeAnchor.extent.z)
+        let planeNode = PlaneFactory().createPlaneNode(width, height)
+        planeNode.position = SCNVector3Make(planeAnchor.center.x, 0, planeAnchor.center.z)
+        
         node.addChildNode(planeNode)
     }
 
